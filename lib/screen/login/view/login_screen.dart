@@ -107,7 +107,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       String msj = await FirebaseHelper.firebaseHelper.signInEmail(txtemail.text, txtpassword.text);
                       if(msj=="SignIn Successfully")
                       {
-                        Get.offAllNamed("home")!.then((value) {
+                        Get.offAndToNamed("home")!.then((value) {
                           txtemail.clear();
                           txtpassword.clear();
                         },);
